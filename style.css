@@ -1,0 +1,119 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #333; /* Dark background for the page */
+  margin: 0;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: #1c1c1c; /* Dark grey background for the calculator */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  width: 320px; /* Adjusted width for better appearance */
+  padding: 20px;
+  text-align: center;
+}
+
+.display {
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 2em;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background: #333; /* Darker background for display */
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures text doesn't overflow */
+  white-space: nowrap; /* Prevents text wrapping */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Creates a grid with 4 equal columns */
+  gap: 10px;
+}
+
+button {
+  background: #444; /* Dark grey background for buttons */
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+button:hover {
+  background: #555; /* Slightly lighter grey on hover */
+}
+
+button:active {
+  background: #666; /* Even lighter grey on click */
+  transform: scale(0.98);
+}
+
+/* Specific button styles */
+button:nth-child(1) {
+  /* Clear button */
+  background: #bdc3c7; /* Light gray */
+  grid-column: span 3; /* Span all 4 columns */
+}
+
+button:nth-child(2) {
+  /* Divide button */
+  background: #e74c3c; /* Red */
+}
+
+button:nth-child(3) {
+  /* Multiply button */
+  background: #f39c12; /* Orange */
+}
+
+button:nth-child(4) {
+  /* Subtract button */
+  background: #3498db; /* Blue */
+}
+
+button:nth-child(5) {
+  /* Add button */
+  background: #2ecc71; /* Green */
+}
+
+button:nth-child(6) {
+  /* Decimal button */
+  background: #444; /* Dark grey */
+  grid-column: span 1; /* Single column */
+}
+
+button:nth-child(7) {
+  /* Number buttons */
+  grid-column: span 1; /* Single column */
+}
+
+button:nth-child(8) {
+  /* Equals button */
+  background: #1abc9c; /* Turquoise */
+  grid-column: span 2; /* Span 2 columns */
+}
